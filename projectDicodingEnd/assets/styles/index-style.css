@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&family=Quicksand:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  background-image: url(https://pm1.narvii.com/6683/e7b18e63c1e1981328a4e6772a6272ce941ad85e_hq.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*Header*/
+header {
+  display: inline;
+  color: white;
+}
+
+.judul {
+  top: 10px;
+  font-size: 24px;
+  padding: 20px;
+}
+
+nav {
+  background-color: transparent;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  padding-inline: 4rem;
+
+  display: flex;
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/*Main Content*/
+section#greeting {
+  font-size: 24px;
+  color: gold;
+  font-weight: bolder;
+}
+
+h2 {
+  color: white;
+  font-weight: bold;
+}
+
+h3 {
+  color: white;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  color: white;
+  display: flex;
+  gap: 1.5rem;
+  text-align: justify;
+  top: 5;
+}
+
+p {
+  padding: 5px;
+}
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+.card {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+.featured-image {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover; 
+  object-position: center; 
+}
+
+/*Profile*/
+.profil {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 24px;
+}
+
+aside {
+  flex: 1;
+  position: sticky;
+  top: 25%;
+  bottom: 25%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url('path/to/image.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/*footer*/
+
+footer {
+  padding: 20px;
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+}
+
+/*Responsive Layout*/
+@media (max-width: 992px) {
+  .navbar .list,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropDown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropDown_menu {
+    left: 2rem;
+    width: unset;
+  }
+
+  .profil {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profil img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+
+  aside img {
+    align-self: center;
+  }
+
+  main figcaption {
+    align-self: center;
+  }
+}
